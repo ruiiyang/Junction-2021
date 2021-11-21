@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Figures</title>
+    <script src="https://cdn.staticfile.org/echarts/4.3.0/echarts.min.js"></script>
+    <script src="http://echarts.baidu.com/resource/echarts-liquidfill-latest/dist/echarts-liquidfill.min.js"></script>
+
+</head>
+<body>
+
+
+<div id="fig1" style="widtd:800px; height:400px;"></div>
+<script type="text/javascript">
+
+    var chartDom = document.getElementById('fig1');
+    var myChart = echarts.init(chartDom);
+    var option;
+
+    option = {
+        backgroundColor:'white',
+        series: [{
+            type: 'liquidFill',
+            data: [0.6],
+            label:{
+                normal:{
+                    //fontSize:80    //这里也可以设置
+                    textStyle:{
+                        fontSize:80  //修改字体大小
+                    }
+                }
+            }
+        }]
+    };
+
+    myChart.setOption(option);
+
+</script>
+
+</body>
+</html>
